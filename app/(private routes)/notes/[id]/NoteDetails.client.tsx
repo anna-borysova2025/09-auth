@@ -1,6 +1,6 @@
 'use client';
 
-import css from '@/app/(privat routes)/notes/[id]/NoteDetails.module.css';
+import css from '@/app/(private routes)/notes/[id]/NoteDetails.module.css';
 import ErrorMessage from '@/components/ErrorMessage/ErrorMessage';
 import Loader from '@/components/Loader/Loader';
 import { fetchNoteById } from '@/lib/api/clientApi';
