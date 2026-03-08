@@ -8,7 +8,7 @@ import ErrorMessage from '@/components/ErrorMessage/ErrorMessage';
 import Loader from '@/components/Loader/Loader';
 import { useState } from 'react';
 import { useQuery, keepPreviousData } from '@tanstack/react-query';
-import { fetchNotes } from '@/lib/api';
+import { fetchNotes } from '@/lib/api/clientApi';
 import { useDebouncedCallback } from 'use-debounce';
 import Link from 'next/link';
 
@@ -49,6 +49,6 @@ export default function NotesClient({ tag }: NotesClientProps) {
       {isLoading && <Loader />}
       {isError && <ErrorMessage />}
       {isSuccess && notes.length > 0 && <NoteList notes={notes} />}
-        </div>
+    </div>
   );
 }
